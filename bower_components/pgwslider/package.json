@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "pgwslider",
+        "scope": null,
+        "escapedName": "pgwslider",
+        "name": "pgwslider",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "c:\\xampp\\htdocs\\Laboratorio4\\Parcial1\\bower_components"
+    ]
+  ],
+  "_from": "pgwslider@latest",
+  "_id": "pgwslider@2.3.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/pgwslider",
+  "_npmUser": {
+    "name": "pagawa",
+    "email": "pgwjs@pagawa.com"
+  },
+  "_npmVersion": "1.4.28",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "pgwslider",
+    "scope": null,
+    "escapedName": "pgwslider",
+    "name": "pgwslider",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/pgwslider/-/pgwslider-2.3.1.tgz",
+  "_shasum": "31f51aca32eaf12cd180d28fb5c256c1c95c1508",
+  "_shrinkwrap": null,
+  "_spec": "pgwslider",
+  "_where": "c:\\xampp\\htdocs\\Laboratorio4\\Parcial1\\bower_components",
+  "author": {
+    "name": "Jonathan M. Piat"
+  },
+  "bugs": {
+    "url": "https://github.com/Pagawa/PgwSlider/issues"
+  },
+  "dependencies": {},
+  "description": "Responsive and lightweight Slider plugin for jQuery / Zepto",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "31f51aca32eaf12cd180d28fb5c256c1c95c1508",
+    "tarball": "https://registry.npmjs.org/pgwslider/-/pgwslider-2.3.1.tgz"
+  },
+  "gitHead": "a788b01d20345b2033a9f763a8d19537b29530ea",
+  "homepage": "https://pgwjs.com/pgwslider",
+  "keywords": [
+    "slider",
+    "slideshow",
+    "gallery",
+    "responsive",
+    "mobile",
+    "image",
+    "animation",
+    "ui",
+    "jquery",
+    "jquery-plugin",
+    "zepto"
+  ],
+  "license": "GNU GPLv3",
+  "main": "pgwslider.js",
+  "maintainers": [
+    {
+      "name": "pagawa",
+      "email": "pgwjs@pagawa.com"
+    }
+  ],
+  "name": "pgwslider",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pagawa/PgwSlider.git"
+  },
+  "scripts": {},
+  "title": "PgwSlider",
+  "version": "2.3.1"
+}

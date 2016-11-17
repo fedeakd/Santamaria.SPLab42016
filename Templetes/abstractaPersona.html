@@ -1,0 +1,50 @@
+
+
+<div   class="nobr"  id="content">
+	<!-- Template -->
+	
+	
+	<div  class="wrapper" style="width:{{isAuthenticated()?300:150}} ">
+		<div ng-if="!isAuthenticated()"  >
+			<p class="formato" >Usted no esta logeado</p>
+			<div   ng-click="IrAAlta()" class='button -regular center -logeo'>Registrarse	</div>
+
+			<div  ng-click="IrALogin()" class='button -dark center -logeo'>Log in</div>
+
+		</div>
+		<div ng-if="isAuthenticated()">
+
+			<p class="formato">Mail:{{mail}}</p>
+			<p class="formato">Usuario:{{usuario}} </p>
+			<p class="formato">Nombre:{{nombre}} </p>
+			<p class="formato">Estado:{{estado}} </p>
+		
+
+			<div ng-click="DesLogeo()" class='button -blue center -logeo'>LOGOUT</div>
+			<div   ng-click="IrAGrillaDeUsuario()"class='button -salmon center -logeo'>Grilla</div>
+
+		</div>
+
+	</div>
+
+	<div  ng-if="isAuthenticated()" >
+		<ul id="darkmenu">
+			<li><a ng-click="IrARegistrarProducto()" >Registrar Producto</a></li>
+			<li><a ng-click="IrAGrillaDeUsuario()" >Grilla de usuario</a></li>
+			<li><a ng-click="IrAGrillaProducto()" >Grilla Producto</a></li>
+			<li><a ng-click="IrALaDirectiva()" >Parte Directivas</a></li>
+		</ul>
+	</div>
+
+</div>
+
+<div ui-view name="contenido"></div>
+
+		<!-- 		<ul ng-if="!estado">
+			<li><a href="/login">Login</a></li>
+			<li><a href="/signup">Sign up</a></li>
+		</ul>
+		<ul ng-if="estado">
+			<li><a href="/logout">Logout</a></li>
+		</ul>
+		This is the actual menu --> 

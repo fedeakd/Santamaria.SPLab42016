@@ -1,0 +1,22 @@
+
+<div class="container">
+	<div class="page-header">
+		
+	</div>
+
+
+	<div class="CajaInicio animated bounceInRight">
+		<h1>Directivas</h1>
+		<h3 style="color:blue;">Usuarios:</h3>
+		<div ng-repeat="u in listadoUsuarios">
+			<traer-usuarios usuarioporparametro='u'></traer-usuarios>
+		</div>
+		<br>
+		<br>
+		<h3 style="color:blue;">Productos:</h3>
+		<div ng-repeat="p in listadoProductos">
+			<traer-productos productoporparametro='p'></traer-productos>
+		</div>
+	</div>
+
+</div>

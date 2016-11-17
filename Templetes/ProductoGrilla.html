@@ -1,0 +1,35 @@
+
+<div class="container">
+
+	<div class="CajaInicio animated bounceInRight">
+		<h1>Listado de productos</h1>
+		<!-- id="listaPersonas" -->
+		<div ui-grid="gridOptions" class="myGrid" ></div>
+		<table class='table table-hover table-responsive' id="listaPersonas">
+			<thead>
+				<tr>			
+					<th>  Nombre     </th>
+					<th>  Cantidad  </th>
+					<th>  Descripcion </th>
+					<th>  BORRAR     </th>
+					<th>  MODIFICAR  </th>
+				</tr> 
+			</thead>
+
+			<tr ng-repeat="productos in ListadoProductos">
+
+				<!-- <td><img  class='fotoGrilla' ng-src="{{productos.avatar}}" /></td>-->
+				<td>{{productos.nombre}}</td>
+				<td>{{productos.cantidad}}</td>
+				<td>{{productos.descripcion}}</td>
+
+				<td><button class='btn btn-danger' name='Borrar' ng-click="Borrar(productos,$index)">   <span class='glyphicon glyphicon-remove-circle'>&nbsp;</span>Borrar</button></td>
+
+				<td><button class='btn btn-warning' name='Modificar' ng-click="Modificar(productos)"><span class='glyphicon glyphicon-edit'>&nbsp;</span>Modificar</button></td>
+
+			</tr>
+
+		</table>
+
+	</div>
+</div>

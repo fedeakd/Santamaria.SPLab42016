@@ -1,0 +1,57 @@
+<div class="container">
+
+	<div class="page-header " >
+		<h1 style="text-align:center;">Producto {{label1}}</h1>      
+	</div>
+	<div class="CajaInicio animated bounceInRight">
+		<h1 sy>{{label2}}</h1>
+
+		<form name="myForm" ng-model="myForm" id="FormIngreso">
+			<span  class="alerta" ng-show="myForm.nombre.$invalid && (show || !myForm.nombre.$untouched)">El nombre es requerido</span>
+			<input type="text" name="nombre"  placeholder="ingrese el nombre" ng-model="nombre" required>
+
+			<br>
+			<span  class="alerta" ng-show="myForm.descripcion.$invalid && (show || !myForm.descripcion.$untouched)">La descripcion es requerido</span>
+			<input type="text" name="descripcion" placeholder="ingrese el descripcion" ng-model="descripcion" required>
+			<br>
+			<span class="alerta"   ng-show="(myForm.cantidad.$error.max || myForm.cantidad.$error.min || myForm.cantidad.$error.number)&& show">cantidad incorrecta!</span>
+			<span class="alerta" ng-show="(myForm.cantidad.$invalid)&& show ">La cantidad es requerida</span>
+
+			<input type="number" name="cantidad"   placeholder="ingrese la cantidad" ng-model="cantidad"  min="0" max="99" required>
+
+
+			<input type="file" nv-file-select uploader="uploader"/>
+
+			<li  class="pgwSlider" ng-repeat="item in uploader.queue ">
+				<!-- nombre del archivo -->
+				Archivo: <span ng-bind="item.file.name"></span><br/>
+				<!-- imagen del archivo -->
+				<div ng-show="uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+				<div class="progress" style="margin-bottom: 0;">
+					<div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }" style="width: 40%;"></div>
+				</div>
+
+
+				<button type="button"  class="btn btn-success btn-xs" ng-click="uploader.uploadAll()" >	<span class="glyphicon glyphicon-upload"></span>
+					cargar</button>
+					<!-- boton cancel -->            
+					<button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+						<span class="glyphicon glyphicon-ban-circle"></span> Cancel
+					</button>
+
+					<!-- boton remove -->
+					<button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+						<span class="glyphicon glyphicon-trash"></span> Remove
+					</button>
+				</li>  
+				<br><br>
+				<button ng-disabled="!uploader.getNotUploadedItems().length" type="button"  class="btn btn-success btn-xs" ng-click="uploader.uploadAll()" >	<span class="glyphicon glyphicon-upload"></span>
+					subir todas las fotos </button>
+					
+					<input type="button" value="Aceptar" class="MiBotonUTN" ng-click="show= myForm.$invalid ? true : false ; show ? true: Aceptar() ">
+					<br>
+					<a  ng-click="IrAlMenu()" clase="MiBotonUTN">Volver</a>
+
+				</form>
+			</div>
+		</div>

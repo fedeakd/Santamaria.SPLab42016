@@ -1,0 +1,20 @@
+<div class="container">
+
+	<div class="page-header " >
+		<h1 style="text-align:center;">Bienvenido  	logiate !!</h1>      
+	</div>
+	<div class="CajaInicio animated bounceInRight">
+		<h1 sy>Logeo</h1>
+
+		<form name="persona" id="FormIngreso">
+			<span class="alerta" ng-show="persona.mail.$error.email">No es un mail valido</span> 
+			<span class="alerta" ng-show="persona.mail.$invalid && show && !persona.mail.$error.email">El mail es requerido</span> 
+			<input type="email" name="mail" ng-model="mail" placeholder="ingrese mail" value="" required />	
+			<span  class="alerta" ng-show="persona.clave.$invalid && show">la clave es requerido</span> <br>
+			<input type="password" name="clave" ng-model="clave" placeholder="ingrese password" value="" required />
+			<input type="button" value="Aceptar" class="button -flower center" ng-click="show= persona.$invalid ? true : false ; show ? true: Logearse() ">
+			<br>
+			<a  ng-click="IrAlRegistro()" clase="MiBotonUTN">Registrarse</a>
+		</form>
+	</div>
+</div>

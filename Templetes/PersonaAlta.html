@@ -1,0 +1,62 @@
+<div class="container">
+
+	<div class="page-header " >
+		<h1 style="text-align:center;">Registrate !!</h1>      
+	</div>
+	<div class="CajaInicio animated bounceInRight">
+		<h1 sy>Registro</h1>
+
+		<form name="myForm" ng-model="myForm" id="FormIngreso">
+			<span  class="alerta" ng-show="myForm.usuario.$invalid && (show || !myForm.usuario.$untouched)">El usuario es requerido</span>
+			<input type="text" name="usuario" placeholder="ingrese el usuario" ng-model="usuario" required>
+
+			<span  class="alerta" ng-show="myForm.nombre.$invalid && (show || !myForm.nombre.$untouched)">El nombre es requerido</span>
+			<input type="text" name="nombre" placeholder="ingrese el nombre" ng-model="nombre" required>
+			<span class="alerta" ng-show="myForm.mail.$error.email">No es un mail valido <br></span> 
+			<span class="alerta" ng-show="myForm.mail.$invalid && show && !myForm.mail.$error.email">El mail es requerido <br></span>
+			<input type="email" name="mail" ng-model="mail" placeholder="ingrese mail" value="" required />	
+			<span class="alerta" ng-show="myForm.clave.$viewValue!=myForm.reClave.$viewValue && !myForm.clave.$invalid"  >Las contraseña no son iguales <br></span>
+			<span class="alerta" ng-show="myForm.clave.$invalid && show">La contraseña es necesaria! <br></span> 
+			<input type="password" name="clave"  ng-model="clave" placeholder="Ingrese la contraseña" required>
+			<span class="alerta" ng-show="myForm.reClave.$invalid && show" >La contraseña es necesaria! <br></span> 
+			<input type="password" name="reClave"  ng-model="reClave" placeholder="Ingrese la contraseña" required>
+
+			<div  class="fileUpload btn btn-info btn-inverse">
+				<span>Subir foto</span>
+				<input type="file" class="upload" nv-file-select uploader="uploader" />
+			</div>
+			<li  class="pgwSlider" ng-repeat="item in uploader.queue ">
+				<!-- nombre del archivo -->
+				Archivo: <span ng-bind="item.file.name"></span><br/>
+				<!-- imagen del archivo -->
+				<div ng-show="uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+				<div class="progress" style="margin-bottom: 0;">
+					<div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }" style="width: 40%;"></div>
+				</div>
+
+
+				<button type="button"  class="btn btn-success btn-xs" ng-click="uploader.uploadAll()" >	<span class="glyphicon glyphicon-upload"></span>
+					cargar</button>
+					<!-- boton cancel -->            
+					<button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+						<span class="glyphicon glyphicon-ban-circle"></span> Cancel
+					</button>
+
+					<!-- boton remove -->
+					<button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+						<span class="glyphicon glyphicon-trash"></span> Remove
+					</button>
+				</li>  
+				<br><br>
+				<button ng-disabled="!uploader.getNotUploadedItems().length" type="button"  class="btn btn-success btn-xs" ng-click="uploader.uploadAll()" >	<span class="glyphicon glyphicon-upload"></span>
+					subir todas las fotos </button>
+					
+					<input type="button" value="Aceptar" class="MiBotonUTN" ng-click="show= myForm.$invalid ? true : false ; show ? true: Guardar() ">
+
+					<input type="button" value="prueba" class="MiBotonUTN" ng-click="Guardar()">
+					<br>
+					<a  ng-click="IrAlMenu()" clase="MiBotonUTN">Volver</a>
+
+				</form>
+			</div>
+		</div>
