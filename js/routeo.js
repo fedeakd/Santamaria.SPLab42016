@@ -1,5 +1,5 @@
 
-var miApp= angular.module("AngularABM",['ui.router','angularFileUpload','satellizer','ngAnimate', 'ngTouch',
+var miApp= angular.module("AngularABM",['ui.router','angularFileUpload','satellizer','ngAnimate', 'ngTouch','ngMap',
 	'ui.grid',
 	'ui.grid.pagination',
 	'ui.grid.resizeColumns',
