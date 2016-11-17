@@ -1,0 +1,5 @@
+ANOTACION  QUE TENGO QUE CONFIGURAR  EN  EL PARCIAL 
+
+1-en routeo/ 	$authProvider.loginUrl='Laboratorio4/Santamaria.SPLab42016/PHP/auth.php';
+2-en los servidores  configurar bien a donde apunta  
+3-Acceso  a datos  configurar bien  a donde apunta 

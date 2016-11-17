@@ -115,7 +115,7 @@ miApp.controller("controlPersonaalta",function($scope,$state, FileUploader, $htt
 
 			else if(respuesta=="yaSeEncuentra"){
 				bootbox.alert({
-					message: "El mail  ya se encuentra !!",
+					message: "El mail o el usuario  ya se encuentra !!",
 					className: 'bb-alternate-modal'
 				});
 			}
@@ -339,10 +339,28 @@ $scope.Modificar=function(persona){
 
 
 miApp.controller("controlPersonaLogin",function($scope, $state,$auth,$http,FactoryUsuario){
+	$scope.persona={};
+	$scope.CargarDatos=function(dato){
 
+
+		switch(dato){
+			case "usuario":
+
+			$scope.usuario="fedeakd";
+			break;
+			case "mail":
+			$scope.mail="soii_fede@hotmail.com";
+			break;
+			case "clave":
+			$scope.clave="federico18";
+			break;
+		}
+
+	}
 	$scope.Logearse=function(){
 		FactoryUsuario.mail= $scope.persona.mail.$modelValue;
 		FactoryUsuario.clave=$scope.persona.clave.$modelValue;
+		FactoryUsuario.usuario=$scope.persona.usuario.$modelValue;
 		FactoryUsuario.VerificarLogin().then(function(respuesta) { 
 
 			console.log(respuesta);

@@ -7,14 +7,22 @@
 		<h1 sy>Logeo</h1>
 
 		<form name="persona" id="FormIngreso">
+			<span  class="alerta" ng-show="persona.usuario.$invalid && show">la usuario es requerido</span> <br>
+			<input type="text" name="usuario" ng-model="usuario" placeholder="ingrese usuario" value="" required />
 			<span class="alerta" ng-show="persona.mail.$error.email">No es un mail valido</span> 
 			<span class="alerta" ng-show="persona.mail.$invalid && show && !persona.mail.$error.email">El mail es requerido</span> 
+			
 			<input type="email" name="mail" ng-model="mail" placeholder="ingrese mail" value="" required />	
-			<span  class="alerta" ng-show="persona.clave.$invalid && show">la clave es requerido</span> <br>
+			<span  class="alerta" ng-show="persona.clave.$invalid && show">la clave es requerido  <br></span>
 			<input type="password" name="clave" ng-model="clave" placeholder="ingrese password" value="" required />
 			<input type="button" value="Aceptar" class="button -flower center" ng-click="show= persona.$invalid ? true : false ; show ? true: Logearse() ">
 			<br>
+			<input type="button" ng-click="CargarDatos('usuario')" class=" " style="background-color: black" value="Cargar Usuario">
+			<input type="button" ng-click="CargarDatos('mail')" class=" " style="background-color: black" value="Cargar Mail">
+			<input type="button" ng-click="CargarDatos('clave')" class=" " style="background-color: black" value="Cargar Clave">
+			<br>
 			<a  ng-click="IrAlRegistro()" clase="MiBotonUTN">Registrarse</a>
+
 		</form>
 	</div>
 </div>

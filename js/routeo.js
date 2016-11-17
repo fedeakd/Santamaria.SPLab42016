@@ -16,7 +16,7 @@ miApp.factory("global",function(){
 })
 
 miApp.config(function($stateProvider,$urlRouterProvider,$authProvider){
-	$authProvider.loginUrl='Laboratorio4/Parcial1/PHP/auth.php';
+	$authProvider.loginUrl='Laboratorio4/Santamaria.SPLab42016/PHP/auth.php';
 	$authProvider.tokenName="Persona";
 	$authProvider.tokenPrefix="Aplicacion";
 	$authProvider.authHeader="data";
